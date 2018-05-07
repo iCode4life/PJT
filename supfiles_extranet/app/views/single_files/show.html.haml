@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @single_file.name
+%p
+  %b Repository:
+  = @single_file.repository
+
+= link_to 'Edit', edit_single_file_path(@single_file)
+\|
+= link_to 'Back', single_files_path

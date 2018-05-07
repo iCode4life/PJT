@@ -1,0 +1,23 @@
+%h1 Listing single_files
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Repository
+      %th
+      %th
+      %th
+
+  %tbody
+    - @single_files.each do |single_file|
+      %tr
+        %td= single_file.name
+        %td= single_file.repository
+        %td= link_to 'Show', single_file
+        %td= link_to 'Edit', edit_single_file_path(single_file)
+        %td= link_to 'Destroy', single_file, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Single file', new_single_file_path
